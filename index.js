@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
   res.send("Hello, Express!");
 });
 
-app.get("/books", async (req, res) => {
+app.get("/booksApp", async (req, res) => {
   try {
     const allbooks = await Books.find();
     res.json(allbooks);
@@ -23,7 +23,7 @@ app.get("/books", async (req, res) => {
   }
 });
 
-app.post("/books", async (req, res) => {
+app.post("/booksApp", async (req, res) => {
   const { bookName, author, genre } = req.body;
 
   try {
@@ -35,7 +35,7 @@ app.post("/books", async (req, res) => {
   }
 });
 
-app.delete("/books/:id", async (req, res) => {
+app.delete("/booksApp/:id", async (req, res) => {
   const bookId = req.params.id;
 
   try {
